@@ -1,0 +1,4 @@
+name = Quiz Core
+description = Give core functionality of quiz
+core = 7.x
+package = PTE

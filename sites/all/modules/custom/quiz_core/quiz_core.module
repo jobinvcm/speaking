@@ -1,0 +1,19 @@
+<?php
+/**
+ * Implements hook_entity_info().
+ */
+function quiz_core_entity_info() {
+    $info = [];
+
+    $info['quiz_core'] = [
+        'label' => t('Quiz Core'),
+        'base table' => 'quiz',
+        'entity keys' => [
+            'id' => 'id',
+            'label' => 'name',
+        ],
+        'module' => 'quiz_core',
+    ];
+
+    return $info;
+}

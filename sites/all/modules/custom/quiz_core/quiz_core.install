@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function quiz_core_schema() {
+    $schema = [];
+    $schema['quiz'] = [
+        'description' => 'Base table for quiz entity',
+        'fields' => [
+            'id' => [
+                'description' => 'Primary key of quiz entity',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'name' => [
+                'description' => 'Brief name of the question',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+            ],
+            'set_no' => [
+                'description' => 'Set No of the question',
+                'type' => 'int',
+                'length' => 10,
+                'not null' => TRUE
+            ],
+        ],
+        'primary key' => ['id'],
+    ];
+
+    return $schema;
+}
